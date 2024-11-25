@@ -38,7 +38,6 @@ console.log(message.charAt(4));
 
 
 // Arrays
-
 let stringarray = ["Max", "Felix", "Katrin"];
 let cars = ["Tesla", "VW", 911];
 cars.push("Audi");
