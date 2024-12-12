@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue no build</title>
+</head>
+<body>
+<div id="app">
+    <h1>{{pageTitle}}</h1>
+    <p>{{pageContent}}</p>
+    <p>{{test}}</p> // not available because not returned
+</div>
+
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+    const app = Vue.createApp({
+        setup() {
+            const pageTitle = Vue.ref("Hello Vue");
+            const pageContent = Vue.ref("Welcome to the world of Vue.js");
+            const test= Vue.ref("Test");    // not returned
+            return {pageTitle, pageContent};
+        }
+    });
+
+    app.mount("#app");
+</script>
+</body>
+</html>
